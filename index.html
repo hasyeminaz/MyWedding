@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3ee">
+  <title>Undangan Pernikahan | Nama Mempelai</title>
+  <meta name="description" content="Undangan pernikahan digital. Kami mengundang Anda untuk hadir di hari bahagia kami.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen"><div class="loading-mark">♥</div><p>Menyiapkan undangan...</p></div>
+
+  <main id="invitation" class="hidden">
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow" id="heroEyebrow">THE WEDDING OF</p>
+        <h1 id="heroNames">Nama &amp; Nama</h1>
+        <p class="hero-date" id="heroDate">Hari, 00 Bulan 0000</p>
+        <div class="guest-greeting">
+          <span>Kepada Yth.</span>
+          <strong id="guestName">Tamu Undangan</strong>
+          <span>di tempat</span>
+        </div>
+        <button class="button button-light" id="openInvitation">Buka Undangan <span aria-hidden="true">↓</span></button>
+      </div>
+    </section>
+
+    <nav class="site-nav" aria-label="Navigasi undangan">
+      <a href="#home" aria-label="Beranda">⌂</a>
+      <a href="#couple" aria-label="Mempelai">♡</a>
+      <a href="#event" aria-label="Acara">▦</a>
+      <a href="#rsvp" aria-label="RSVP">✉</a>
+    </nav>
+
+    <section class="section intro" id="couple">
+      <p class="eyebrow">ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
+      <h2>Dengan memohon rahmat dan ridho Allah SWT</h2>
+      <p class="section-copy" id="introText">Dengan penuh rasa syukur, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami.</p>
+      <div class="couple-grid">
+        <article class="person-card">
+          <img id="groomPhoto" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85" alt="Foto mempelai pria">
+          <h3 id="groomName">Nama Mempelai Pria</h3>
+          <p id="groomParents">Putra dari Bapak ... dan Ibu ...</p>
+        </article>
+        <div class="ampersand">&amp;</div>
+        <article class="person-card">
+          <img id="bridePhoto" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=85" alt="Foto mempelai wanita">
+          <h3 id="brideName">Nama Mempelai Wanita</h3>
+          <p id="brideParents">Putri dari Bapak ... dan Ibu ...</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section story-section" id="story">
+      <p class="eyebrow">OUR STORY</p>
+      <h2>Cerita Kami</h2>
+      <p class="section-copy" id="storyText">Setiap pertemuan memiliki cerita. Kami bersyukur perjalanan ini membawa kami menuju hari istimewa yang ingin kami rayakan bersama keluarga dan sahabat.</p>
+    </section>
+
+    <section class="section event-section" id="event">
+      <p class="eyebrow">SAVE THE DATE</p>
+      <h2>Menuju Hari Bahagia</h2>
+      <div class="countdown" id="countdown">
+        <div><strong id="days">00</strong><span>Hari</span></div>
+        <div><strong id="hours">00</strong><span>Jam</span></div>
+        <div><strong id="minutes">00</strong><span>Menit</span></div>
+        <div><strong id="seconds">00</strong><span>Detik</span></div>
+      </div>
+      <div class="event-grid" id="eventCards"></div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <p class="eyebrow">MOMENTS</p>
+      <h2>Galeri Kami</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="section location-section" id="location">
+      <p class="eyebrow">LOKASI ACARA</p>
+      <h2>Merupakan Kehormatan</h2>
+      <p class="section-copy" id="locationText">Kami menantikan kehadiran Anda untuk berbagi kebahagiaan bersama.</p>
+      <a class="button" id="mapButton" href="#" target="_blank" rel="noopener">Buka Google Maps ↗</a>
+    </section>
+
+    <section class="section rsvp-section" id="rsvp">
+      <p class="eyebrow">KONFIRMASI KEHADIRAN</p>
+      <h2>RSVP</h2>
+      <p class="section-copy">Mohon konfirmasi kehadiran Anda melalui formulir berikut.</p>
+      <form id="rsvpForm">
+        <label for="rsvpName">Nama</label>
+        <input id="rsvpName" name="name" required maxlength="100" placeholder="Nama lengkap">
+        <label for="rsvpAttendance">Konfirmasi kehadiran</label>
+        <select id="rsvpAttendance" name="attendance" required>
+          <option value="">Pilih jawaban</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+          <option value="Masih Ragu">Masih Ragu</option>
+        </select>
+        <label for="rsvpCount">Jumlah tamu</label>
+        <select id="rsvpCount" name="count">
+          <option value="1">1 orang</option><option value="2">2 orang</option><option value="3">3 orang</option><option value="4">4 orang</option>
+        </select>
+        <label for="rsvpMessage">Ucapan / doa (opsional)</label>
+        <textarea id="rsvpMessage" name="message" rows="4" maxlength="500" placeholder="Tuliskan ucapan dan doa..."></textarea>
+        <button class="button button-full" type="submit" id="rsvpSubmit">Kirim Konfirmasi</button>
+        <p class="form-status" id="rsvpStatus" role="status"></p>
+      </form>
+    </section>
+
+    <section class="section wishes-section" id="wishes">
+      <p class="eyebrow">DOA &amp; UCAPAN</p>
+      <h2>Ucapan dari Anda</h2>
+      <div id="wishesList" class="wishes-list"><p class="muted">Memuat ucapan...</p></div>
+    </section>
+
+    <footer class="footer">
+      <p>Terima kasih atas doa dan kehadiran Anda.</p>
+      <h2 id="footerNames">Nama &amp; Nama</h2>
+      <p class="copyright">Dibuat dengan ♥ untuk hari yang istimewa</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
