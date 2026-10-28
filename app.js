@@ -9,13 +9,13 @@ const API_URL = "https://script.google.com/macros/s/AKfycbwbSlYARQZ-24PLx7Ox0Siu
 const DATA = {
   title: "Undangan Pernikahan",
   groom: {
-    name: "Nama Mempelai Pria",
-    parents: "Putra dari Bapak Nama Ayah dan Ibu Nama Ibu",
+    name: "Hasyemi Nazar",
+    parents: "Putra dari Bapak Tarbu dan Ibu Sainem",
     photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85"
   },
   bride: {
-    name: "Nama Mempelai Wanita",
-    parents: "Putri dari Bapak Nama Ayah dan Ibu Nama Ibu",
+    name: "Amanah Fidyaningsih",
+    parents: "Putri dari Bapak Caryono dan Ibu Daniyah",
     photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=85"
   },
   dateISO: "2027-04-02T08:00:00+07:00", // format ISO, termasuk zona waktu
@@ -24,7 +24,7 @@ const DATA = {
   story: "Setiap pertemuan memiliki cerita. Kami bersyukur perjalanan ini membawa kami menuju hari istimewa yang ingin kami rayakan bersama keluarga dan sahabat.",
   events: [
     { title: "Akad Nikah", date: "Jumat, 2 April 2027", time: "08.00 WIB - selesai", address: "Alamat lokasi akad, Kota", map: "https://maps.google.com/?q=Lokasi+Akad" },
-    { title: "Resepsi", date: "Jumat, 2 April 2027", time: "11.00 - 14.00 WIB", address: "Alamat lokasi resepsi, Kota", map: "https://maps.google.com/?q=Lokasi+Resepsi" }
+    { title: "Resepsi", date: "Jumat, 2 April 2027", time: "13.00 WIB - selesai", address: "Alamat lokasi resepsi, Kota", map: "https://maps.google.com/?q=Lokasi+Resepsi" }
   ],
   locationText: "Kehadiran dan doa restu Anda merupakan kebahagiaan bagi kami.",
   mapUrl: "https://maps.google.com/",
